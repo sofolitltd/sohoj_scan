@@ -1,0 +1,90 @@
+/* Sohoj — generated from tokens.json */
+:root, [data-theme="dark"] {
+  --bg: #0B0C0A;
+  --surface: #161814;
+  --surface-raised: #22251F;
+  --ink: #F4F2EA;
+  --ink-muted: #BDBBB1;
+  --line: #2E312A;
+  --line-strong: #80837A;
+  --signal: #C6F432;
+  --on-signal: #0B0C0A;
+  --signal-ink: #C6F432;
+  --accent: #C6F432;
+  --on-accent: #0B0C0A;
+  --scan: #FFB23F;
+  --scan-ink: #FFB23F;
+  --danger: #FF9A8D;
+  --scrim: rgba(0,0,0,0.62);
+  --bubble: #0B0C0A;
+  --shadow-bubble: 0 6px 20px rgba(0,0,0,0.45);
+}
+[data-theme="light"] {
+  --bg: #F4F2EB;
+  --surface: #FFFFFF;
+  --surface-raised: #E9E6DC;
+  --ink: #0E0F0C;
+  --ink-muted: #43423D;
+  --line: #D6D2C6;
+  --line-strong: #6E6B62;
+  --signal: #C6F432;
+  --on-signal: #0B0C0A;
+  --signal-ink: #3B5000;
+  --accent: #0E0F0C;
+  --on-accent: #C6F432;
+  --scan: #FFB23F;
+  --scan-ink: #6A3C00;
+  --danger: #8E2316;
+  --scrim: rgba(0,0,0,0.62);
+  --bubble: #0B0C0A;
+  --shadow-bubble: 0 6px 20px rgba(0,0,0,0.45);
+}
+[data-theme="contrast"] {
+  --bg: #000000;
+  --surface: #000000;
+  --surface-raised: #141414;
+  --ink: #FFFFFF;
+  --ink-muted: #E8E8E8;
+  --line: #8A8A8A;
+  --line-strong: #FFFFFF;
+  --signal: #FFE500;
+  --on-signal: #000000;
+  --signal-ink: #FFE500;
+  --accent: #FFE500;
+  --on-accent: #000000;
+  --scan: #FFFFFF;
+  --scan-ink: #FFFFFF;
+  --danger: #FF8A80;
+  --scrim: rgba(0,0,0,0.8);
+  --bubble: #000000;
+  --shadow-bubble: 0 6px 20px rgba(0,0,0,0.45);
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+  --size-touch: 64px;
+  --size-button: 88px;
+  --size-bubble: 64px;
+  --size-icon: 32px;
+  --font-ui: "Atkinson Hyperlegible Next", "Noto Sans Bengali", system-ui, sans-serif;
+  --font-num: "Atkinson Hyperlegible Mono", "Atkinson Hyperlegible Next", ui-monospace, monospace;
+}
+.number-hero { font-family: var(--font-num); font-size: 72px; line-height: 80px; font-weight: 700; letter-spacing: 0.02em; }
+.number-card { font-family: var(--font-num); font-size: 32px; line-height: 40px; font-weight: 700; letter-spacing: 0.02em; }
+.number-row { font-family: var(--font-num); font-size: 28px; line-height: 36px; font-weight: 600; letter-spacing: 0.02em; }
+.display { font-family: var(--font-ui); font-size: 34px; line-height: 44px; font-weight: 700; }
+.title { font-family: var(--font-ui); font-size: 28px; line-height: 38px; font-weight: 700; }
+.label { font-family: var(--font-ui); font-size: 24px; line-height: 32px; font-weight: 700; }
+.body-lg { font-family: var(--font-ui); font-size: 22px; line-height: 32px; font-weight: 500; }
+.body { font-family: var(--font-ui); font-size: 20px; line-height: 30px; font-weight: 400; }
+.caption { font-family: var(--font-ui); font-size: 18px; line-height: 26px; font-weight: 500; }

@@ -1,0 +1,16 @@
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+*.iml
+.idea/
+android/.gradle/
+android/local.properties
+android/app/debug/
+android/app/release/
+
+# ~40MB Vosk voice model; the owner downloads it locally (see assets/models/README.md).
+assets/models/*.zip
+
+.DS_Store

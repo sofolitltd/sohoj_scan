@@ -1,0 +1,60 @@
+name: sohoj_scan
+description: "Sohoj Scan — reads Bangladeshi phone numbers from paper or a phone screen, shows them huge, reads them aloud, copies in one tap."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+# Versions were current when this starter was written. Run
+#   flutter pub upgrade --major-versions
+# once after `flutter pub get` to move to the newest releases.
+dependencies:
+  flutter:
+    sdk: flutter
+  camera: ^0.11.0
+  google_mlkit_text_recognition: ^0.14.0
+  flutter_tts: ^4.0.2
+  permission_handler: ^13.0.2
+  shared_preferences: ^2.3.2
+  vosk_flutter_service: ^0.1.3
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/models/
+  fonts:
+    - family: AtkinsonHyperlegibleNext
+      fonts:
+        - asset: assets/fonts/AtkinsonHyperlegibleNext_400Regular.ttf
+          weight: 400
+        - asset: assets/fonts/AtkinsonHyperlegibleNext_500Medium.ttf
+          weight: 500
+        - asset: assets/fonts/AtkinsonHyperlegibleNext_600SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/AtkinsonHyperlegibleNext_700Bold.ttf
+          weight: 700
+        - asset: assets/fonts/AtkinsonHyperlegibleNext_800ExtraBold.ttf
+          weight: 800
+    - family: AtkinsonHyperlegibleMono
+      fonts:
+        - asset: assets/fonts/AtkinsonHyperlegibleMono_400Regular.ttf
+          weight: 400
+        - asset: assets/fonts/AtkinsonHyperlegibleMono_600SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/AtkinsonHyperlegibleMono_700Bold.ttf
+          weight: 700
+    - family: NotoSansBengali
+      fonts:
+        - asset: assets/fonts/NotoSansBengali_400Regular.ttf
+          weight: 400
+        - asset: assets/fonts/NotoSansBengali_500Medium.ttf
+          weight: 500
+        - asset: assets/fonts/NotoSansBengali_600SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/NotoSansBengali_700Bold.ttf
+          weight: 700

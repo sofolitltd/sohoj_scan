@@ -1,0 +1,314 @@
+<!doctype html><html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sohoj Scan — Screens</title>
+<style>@font-face{font-family:"Atkinson Hyperlegible Next";font-weight:400;font-style:normal;src:url("../assets/fonts/AtkinsonHyperlegibleNext_400Regular.ttf") format("truetype");}
+@font-face{font-family:"Atkinson Hyperlegible Next";font-weight:500;font-style:normal;src:url("../assets/fonts/AtkinsonHyperlegibleNext_500Medium.ttf") format("truetype");}
+@font-face{font-family:"Atkinson Hyperlegible Next";font-weight:600;font-style:normal;src:url("../assets/fonts/AtkinsonHyperlegibleNext_600SemiBold.ttf") format("truetype");}
+@font-face{font-family:"Atkinson Hyperlegible Next";font-weight:700;font-style:normal;src:url("../assets/fonts/AtkinsonHyperlegibleNext_700Bold.ttf") format("truetype");}
+@font-face{font-family:"Atkinson Hyperlegible Next";font-weight:800;font-style:normal;src:url("../assets/fonts/AtkinsonHyperlegibleNext_800ExtraBold.ttf") format("truetype");}
+@font-face{font-family:"Atkinson Hyperlegible Mono";font-weight:400;font-style:normal;src:url("../assets/fonts/AtkinsonHyperlegibleMono_400Regular.ttf") format("truetype");}
+@font-face{font-family:"Atkinson Hyperlegible Mono";font-weight:600;font-style:normal;src:url("../assets/fonts/AtkinsonHyperlegibleMono_600SemiBold.ttf") format("truetype");}
+@font-face{font-family:"Atkinson Hyperlegible Mono";font-weight:700;font-style:normal;src:url("../assets/fonts/AtkinsonHyperlegibleMono_700Bold.ttf") format("truetype");}
+@font-face{font-family:"Noto Sans Bengali";font-weight:400;font-style:normal;src:url("../assets/fonts/NotoSansBengali_400Regular.ttf") format("truetype");}
+@font-face{font-family:"Noto Sans Bengali";font-weight:500;font-style:normal;src:url("../assets/fonts/NotoSansBengali_500Medium.ttf") format("truetype");}
+@font-face{font-family:"Noto Sans Bengali";font-weight:600;font-style:normal;src:url("../assets/fonts/NotoSansBengali_600SemiBold.ttf") format("truetype");}
+@font-face{font-family:"Noto Sans Bengali";font-weight:700;font-style:normal;src:url("../assets/fonts/NotoSansBengali_700Bold.ttf") format("truetype");}
+@font-face{font-family:"Caveat";font-weight:600;src:url("caveat-600.woff2") format("woff2");}
+/* Sohoj — generated from tokens.json */
+:root, [data-theme="dark"] {
+  --bg: #0B0C0A;
+  --surface: #161814;
+  --surface-raised: #22251F;
+  --ink: #F4F2EA;
+  --ink-muted: #BDBBB1;
+  --line: #2E312A;
+  --line-strong: #80837A;
+  --signal: #C6F432;
+  --on-signal: #0B0C0A;
+  --signal-ink: #C6F432;
+  --accent: #C6F432;
+  --on-accent: #0B0C0A;
+  --scan: #FFB23F;
+  --scan-ink: #FFB23F;
+  --danger: #FF9A8D;
+  --scrim: rgba(0,0,0,0.62);
+  --bubble: #0B0C0A;
+  --shadow-bubble: 0 6px 20px rgba(0,0,0,0.45);
+}
+[data-theme="light"] {
+  --bg: #F4F2EB;
+  --surface: #FFFFFF;
+  --surface-raised: #E9E6DC;
+  --ink: #0E0F0C;
+  --ink-muted: #43423D;
+  --line: #D6D2C6;
+  --line-strong: #6E6B62;
+  --signal: #C6F432;
+  --on-signal: #0B0C0A;
+  --signal-ink: #3B5000;
+  --accent: #0E0F0C;
+  --on-accent: #C6F432;
+  --scan: #FFB23F;
+  --scan-ink: #6A3C00;
+  --danger: #8E2316;
+  --scrim: rgba(0,0,0,0.62);
+  --bubble: #0B0C0A;
+  --shadow-bubble: 0 6px 20px rgba(0,0,0,0.45);
+}
+[data-theme="contrast"] {
+  --bg: #000000;
+  --surface: #000000;
+  --surface-raised: #141414;
+  --ink: #FFFFFF;
+  --ink-muted: #E8E8E8;
+  --line: #8A8A8A;
+  --line-strong: #FFFFFF;
+  --signal: #FFE500;
+  --on-signal: #000000;
+  --signal-ink: #FFE500;
+  --accent: #FFE500;
+  --on-accent: #000000;
+  --scan: #FFFFFF;
+  --scan-ink: #FFFFFF;
+  --danger: #FF8A80;
+  --scrim: rgba(0,0,0,0.8);
+  --bubble: #000000;
+  --shadow-bubble: 0 6px 20px rgba(0,0,0,0.45);
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+  --size-touch: 64px;
+  --size-button: 88px;
+  --size-bubble: 64px;
+  --size-icon: 32px;
+  --font-ui: "Atkinson Hyperlegible Next", "Noto Sans Bengali", system-ui, sans-serif;
+  --font-num: "Atkinson Hyperlegible Mono", "Atkinson Hyperlegible Next", ui-monospace, monospace;
+}
+.number-hero { font-family: var(--font-num); font-size: 72px; line-height: 80px; font-weight: 700; letter-spacing: 0.02em; }
+.number-card { font-family: var(--font-num); font-size: 32px; line-height: 40px; font-weight: 700; letter-spacing: 0.02em; }
+.number-row { font-family: var(--font-num); font-size: 28px; line-height: 36px; font-weight: 600; letter-spacing: 0.02em; }
+.display { font-family: var(--font-ui); font-size: 34px; line-height: 44px; font-weight: 700; }
+.title { font-family: var(--font-ui); font-size: 28px; line-height: 38px; font-weight: 700; }
+.label { font-family: var(--font-ui); font-size: 24px; line-height: 32px; font-weight: 700; }
+.body-lg { font-family: var(--font-ui); font-size: 22px; line-height: 32px; font-weight: 500; }
+.body { font-family: var(--font-ui); font-size: 20px; line-height: 30px; font-weight: 400; }
+.caption { font-family: var(--font-ui); font-size: 18px; line-height: 26px; font-weight: 500; }
+
+
+/* Sohoj components. Every value comes from tokens.css. */
+body { margin: 0; font-family: var(--font-ui); background: var(--bg); color: var(--ink); font-size: 20px; line-height: 30px; }
+.sj-stage { padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-4); }
+.sj-stage.row { flex-direction: row; flex-wrap: wrap; align-items: center; }
+.sj-icon { width: var(--size-icon); height: var(--size-icon); flex: none; }
+.sj-icon.sm { width: 24px; height: 24px; }
+
+/* Button */
+.sj-btn { font: inherit; font-size: 24px; line-height: 32px; font-weight: 700; height: var(--size-button); min-width: 200px; padding: 0 var(--space-8); border-radius: var(--radius-pill); border: 0; display: inline-flex; align-items: center; justify-content: center; gap: var(--space-3); cursor: pointer; box-sizing: border-box; }
+.sj-btn.block { width: 100%; }
+.sj-btn.primary { background: var(--accent); color: var(--on-accent); }
+.sj-btn.secondary { background: transparent; color: var(--ink); border: 2px solid var(--line-strong); }
+.sj-btn.quiet { background: var(--surface-raised); color: var(--ink); }
+.sj-btn:focus-visible, .sj-iconbtn:focus-visible, .sj-card:focus-visible { outline: 3px solid var(--signal-ink); outline-offset: 3px; }
+
+/* Icon button */
+.sj-iconbtn { width: var(--size-touch); height: var(--size-touch); border-radius: var(--radius-pill); border: 0; background: var(--surface-raised); color: var(--ink); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+.sj-iconbtn.on { background: var(--signal); color: var(--on-signal); }
+
+/* Number */
+.sj-number { font-family: var(--font-num); font-weight: 700; letter-spacing: 0.02em; display: flex; gap: var(--space-4); color: var(--ink); font-variant-numeric: tabular-nums; }
+.sj-number.hero { font-size: 72px; line-height: 80px; flex-direction: column; gap: 0; }
+.sj-number.card { font-size: 32px; line-height: 40px; gap: var(--space-3); }
+.sj-number.row { font-size: 28px; line-height: 36px; font-weight: 600; gap: var(--space-2); }
+
+/* Status pill */
+.sj-pill { display: inline-flex; align-items: center; gap: var(--space-2); height: 48px; padding: 0 var(--space-6) 0 var(--space-4); border-radius: var(--radius-pill); font-size: 22px; font-weight: 700; color: var(--on-signal); }
+.sj-pill.searching { background: var(--scan); }
+.sj-pill.locked { background: var(--signal); }
+.sj-pill.error { background: var(--surface-raised); color: var(--danger); border: 2px solid var(--danger); }
+.sj-pill .dot { width: 12px; height: 12px; border-radius: 50%; background: currentColor; }
+
+/* Operator chip */
+.sj-chip { display: inline-flex; align-items: center; gap: var(--space-2); height: 40px; padding: 0 var(--space-4); border-radius: var(--radius-sm); background: var(--surface-raised); color: var(--ink); font-size: 18px; line-height: 26px; font-weight: 600; }
+
+/* Scan frame */
+.sj-frame { position: relative; width: 300px; height: 180px; }
+.sj-frame i { position: absolute; width: 44px; height: 44px; border: 6px solid var(--scan); }
+.sj-frame.locked i { border-color: var(--signal); }
+.sj-frame i:nth-child(1) { left: 0; top: 0; border-right: 0; border-bottom: 0; border-top-left-radius: var(--radius-md); }
+.sj-frame i:nth-child(2) { right: 0; top: 0; border-left: 0; border-bottom: 0; border-top-right-radius: var(--radius-md); }
+.sj-frame i:nth-child(3) { right: 0; bottom: 0; border-left: 0; border-top: 0; border-bottom-right-radius: var(--radius-md); }
+.sj-frame i:nth-child(4) { left: 0; bottom: 0; border-right: 0; border-top: 0; border-bottom-left-radius: var(--radius-md); }
+.sj-frame .line { position: absolute; left: 24px; right: 24px; top: 50%; height: 3px; border-radius: 2px; background: var(--scan); opacity: .9; }
+.sj-frame.locked .line { display: none; }
+
+/* Number card (choice) */
+.sj-card { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); padding: var(--space-6); border-radius: var(--radius-lg); background: var(--surface); border: 2px solid var(--line-strong); color: var(--ink); min-height: 112px; box-sizing: border-box; }
+.sj-card .meta { display: flex; flex-direction: column; gap: var(--space-2); }
+.sj-card .go { width: 40px; height: 40px; border-radius: var(--radius-pill); background: var(--surface-raised); color: var(--ink); display: flex; align-items: center; justify-content: center; flex: none; }
+
+/* History row */
+.sj-row { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); padding: var(--space-4) var(--space-6); min-height: 88px; border-bottom: 1px solid var(--line); box-sizing: border-box; }
+.sj-row .meta { display: flex; flex-direction: column; gap: var(--space-1); }
+.sj-row .time { font-size: 18px; line-height: 26px; color: var(--ink-muted); }
+
+/* Setup step */
+.sj-step { display: flex; align-items: center; gap: var(--space-4); padding: var(--space-4) var(--space-6); border-radius: var(--radius-md); background: var(--surface); border: 2px solid var(--line); min-height: 96px; box-sizing: border-box; }
+.sj-step .n { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 22px; background: var(--surface-raised); color: var(--ink); flex: none; }
+.sj-step.done .n { background: var(--signal); color: var(--on-signal); }
+.sj-step.todo { border-color: var(--line-strong); }
+.sj-step .txt { flex: 1; display: flex; flex-direction: column; }
+.sj-step .txt b { font-size: 22px; line-height: 30px; }
+.sj-step .txt span { font-size: 18px; line-height: 26px; color: var(--ink-muted); }
+.sj-step .act { height: var(--size-touch); padding: 0 var(--space-6); border-radius: var(--radius-pill); background: var(--accent); color: var(--on-accent); font: inherit; font-weight: 700; font-size: 20px; border: 0; }
+.sj-step .ok { color: var(--signal-ink); font-weight: 700; font-size: 20px; display: flex; align-items: center; gap: var(--space-1); }
+
+/* Floating bubble */
+.sj-bubble { width: var(--size-bubble); height: var(--size-bubble); border-radius: var(--radius-pill); background: var(--bubble); box-shadow: var(--shadow-bubble), inset 0 0 0 3px var(--signal); display: flex; align-items: center; justify-content: center; color: var(--signal); }
+.sj-bubble.lg { width: 76px; height: 76px; }
+.sj-bubble.sm { width: 56px; height: 56px; }
+
+/* Toast */
+.sj-toast { display: inline-flex; align-items: center; gap: var(--space-3); height: 72px; padding: 0 var(--space-8) 0 var(--space-6); border-radius: var(--radius-pill); background: var(--signal); color: var(--on-signal); font-size: 24px; font-weight: 700; box-shadow: var(--shadow-bubble); }
+
+
+html,body{background:#E7E4DA;color:#0E0F0C}
+.page{max-width:1600px;margin:0 auto;padding:56px 48px 96px;font-family:var(--font-ui)}
+.page>header{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:48px;flex-wrap:wrap}
+.page h1.h{font-size:56px;line-height:1;margin:0;font-weight:800;letter-spacing:-.02em}
+.page .sub{font-size:18px;line-height:28px;color:#43423D;max-width:640px;margin:12px 0 0}
+.legend{display:flex;gap:12px;flex-wrap:wrap}.legend span{display:inline-flex;align-items:center;gap:8px;font-size:15px;background:#fff;padding:8px 14px;border-radius:999px}
+.legend i{width:14px;height:14px;border-radius:50%}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:56px 40px}
+figure{margin:0}figcaption{margin-top:18px;max-width:360px}figcaption b{display:block;font-size:18px;margin-bottom:4px}figcaption span{font-size:15px;line-height:22px;color:#43423D}
+.phone{width:360px;height:760px;border-radius:44px;overflow:hidden;position:relative;background:var(--bg);color:var(--ink);box-shadow:0 0 0 10px #111,0 0 0 11px #333,0 30px 60px rgba(0,0,0,.25);font-family:var(--font-ui);display:flex;flex-direction:column;margin:11px}
+.sbar{height:36px;flex:none;display:flex;justify-content:space-between;align-items:center;padding:0 26px;font-size:14px;font-weight:700;position:relative;z-index:5}
+.sb-r{display:flex;gap:6px;align-items:center}.batt{width:22px;height:11px;border:2px solid currentColor;border-radius:3px;position:relative}.batt:after{content:"";position:absolute;inset:1px 5px 1px 1px;background:currentColor;border-radius:1px}
+.navbar{height:24px;flex:none;display:flex;align-items:center;justify-content:center;position:absolute;bottom:0;left:0;right:0;z-index:9}.navbar i{width:110px;height:5px;border-radius:3px;background:currentColor;opacity:.6}
+.screen{flex:1;display:flex;flex-direction:column;min-height:0}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:8px 16px;gap:8px}
+.tb-title{margin:0;font-size:24px;line-height:32px}
+.pad{padding:8px 24px;flex:1;min-height:0}
+.actions{padding:16px 24px 40px;display:flex;flex-direction:column;gap:16px;margin-top:auto}
+.muted{color:var(--ink-muted)}.display,.title{margin:0}
+.display{font-size:34px;line-height:44px;font-weight:700;margin:8px 0 4px}
+.body,.body-lg,.caption{margin:0}
+.res-body{padding:8px 24px 0;flex:1}
+.res-body .caption{margin:4px 0 8px}
+.sj-number.hero span{display:block;width:max-content;padding-bottom:2px;border-bottom:5px solid transparent}
+.sj-number.hero .now{border-bottom-color:var(--signal-ink)}
+.res-meta{display:flex;align-items:center;justify-content:space-between;margin-top:18px;gap:12px}
+.listen{height:64px;min-width:0;padding:0 22px;font-size:22px}
+.sj-pill.small{height:44px;font-size:20px}
+.sj-btn{font-family:var(--font-ui)}
+.sm-btn{height:64px;min-width:0;font-size:20px;padding:0 24px}
+/* camera */
+.cam{position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 45%,#5a5547 0%,#2b2a24 55%,#141411 100%);overflow:hidden;color:#F4F2EA}
+.paper{position:absolute;left:36px;top:250px;width:300px;height:250px;background:#efe9da;transform:rotate(-4deg);border-radius:4px;box-shadow:0 12px 30px rgba(0,0,0,.5);display:flex;flex-direction:column;padding:26px 24px;gap:6px;filter:blur(.3px)}
+.paper:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(transparent 0 33px,rgba(70,100,160,.18) 33px 34px)}
+.hw{font-family:"Caveat",cursive;color:#1d2a6b;font-size:28px;position:relative}
+.hw.big{font-size:42px;letter-spacing:0;margin-top:8px}.hw.sm{font-size:26px;margin-top:10px}
+.scrimwrap{position:absolute;inset:0}
+.hole{position:absolute;left:30px;top:318px;width:300px;height:110px;border-radius:20px;box-shadow:0 0 0 900px var(--scrim)}
+.cam-frame{position:absolute;left:30px;top:318px;width:300px;height:110px}
+.cam-top{position:absolute;top:44px;left:16px;right:16px;display:flex;justify-content:space-between;align-items:center}
+.glass{background:rgba(255,255,255,.16);color:#fff}
+.cam-hint{position:absolute;left:24px;right:24px;top:450px;text-align:center;font-weight:600;color:#fff}
+.cam-bottom{position:absolute;left:0;right:0;bottom:48px;display:flex;justify-content:center}
+.cam .sj-btn.quiet{background:rgba(255,255,255,.16);color:#fff}
+/* choose */
+.cards{display:flex;flex-direction:column;gap:16px;margin-top:24px}
+.sj-card .meta{width:100%}.crow{display:flex;justify-content:space-between;align-items:center}
+/* other app */
+.other{position:absolute;inset:0;padding-top:36px}
+.light-app{background:#F7F7F5;color:#1b1b1b}
+.oa-bar{display:flex;align-items:center;gap:12px;height:56px;padding:0 16px;font-size:20px;border-bottom:1px solid #e4e4e0}
+.oa-body{padding:20px;display:flex;flex-direction:column;gap:8px;font-size:16px}
+.oa-body label{color:#555;margin-top:8px}
+.oa-input{height:56px;border-radius:12px;border:1.5px solid #cfcfca;background:#fff;display:flex;align-items:center;padding:0 14px}
+.oa-input.focus{border:2px solid #1b1b1b}.caret{width:2px;height:26px;background:#1b1b1b}
+.kb{position:absolute;left:0;right:0;bottom:0;background:#e3e4e8;padding:8px 6px 30px}
+.kb-chip{display:flex;justify-content:center;padding:4px 0 10px}
+.kchip{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:8px 16px;font-family:var(--font-num);font-size:20px;font-weight:700;color:#111;box-shadow:0 0 0 3px #C6F432}
+.kb-keys{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.kb-keys span{background:#fff;border-radius:8px;height:44px;display:flex;align-items:center;justify-content:center;font-size:22px;color:#111}.kb-keys .w{background:#cfd1d7}
+.toast-pos{position:absolute;left:50%;transform:translateX(-50%);top:396px;white-space:nowrap}
+.bubble-edge{position:absolute;right:-14px;top:150px}
+.home{background:linear-gradient(160deg,#cfd8c9,#b9c3c9)}
+.hgrid{display:grid;grid-template-columns:repeat(4,56px);gap:30px 24px;justify-content:center;padding-top:70px}.hgrid i{width:56px;height:56px;border-radius:16px;background:rgba(255,255,255,.55)}
+.drag{position:absolute;left:150px;top:470px}
+.dismiss{position:absolute;left:50%;bottom:56px;transform:translateX(-50%);width:84px;height:84px;border-radius:50%;background:rgba(14,15,12,.85);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:16px;font-weight:700;box-shadow:0 0 0 3px rgba(255,255,255,.7)}
+.shade{background:#111210;color:#F4F2EA;padding:48px 16px 0}
+.qs-head{font-size:16px;color:#BDBBB1;padding:0 8px 16px}
+.qs-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.qs-tile{height:72px;border-radius:24px;background:#22251F;display:flex;align-items:center;gap:12px;padding:0 18px;font-size:17px;font-weight:600}
+.qs-tile.on{background:var(--signal);color:var(--on-signal);box-shadow:0 0 0 3px #F4F2EA}
+.qs-bright{margin:22px 4px;height:48px;border-radius:24px;background:#22251F;overflow:hidden}.qs-bright span{display:block;width:60%;height:100%;background:#3a3d35}
+.list{flex:1;background:var(--surface);overflow:hidden}
+.steps{display:flex;flex-direction:column;gap:12px;margin-top:20px}
+.sj-step .txt b{font-size:21px}
+.set{display:flex;flex-direction:column;gap:20px}
+.set-g{display:flex;flex-direction:column;gap:10px}.label-s{font-size:20px}
+.row-t{flex-direction:row;justify-content:space-between;align-items:center}
+.seg{display:flex;background:var(--surface-raised);border-radius:999px;padding:4px}.seg span{flex:1;text-align:center;height:52px;display:flex;align-items:center;justify-content:center;border-radius:999px;font-size:17px;font-weight:600}
+.seg .on{background:var(--accent);color:var(--on-accent)}
+.tog{width:72px;height:40px;border-radius:999px;background:var(--surface-raised);position:relative;border:2px solid var(--line-strong)}.tog i{position:absolute;top:4px;left:4px;width:28px;height:28px;border-radius:50%;background:var(--ink)}
+.tog.on{background:var(--accent);border-color:var(--accent)}.tog.on i{left:36px;background:var(--on-accent)}
+.sample{margin-top:4px;padding:16px;border-radius:20px;border:2px dashed var(--line-strong);display:flex;flex-direction:column;gap:4px}
+.err{display:flex;flex-direction:column;justify-content:center;gap:12px}.err-ic{color:var(--danger)}
+</style></head><body><div class="page">
+<header><div><h1 class="h">Sohoj Scan</h1><p class="sub">App-এর সব screen, Sohoj design system দিয়ে বানানো। মাপ 360×760dp। ভাইকে phone-এ বা ল্যাপটপে বড় করে দেখিয়ে মতামত নিন, তারপর কোড শুরু করবেন।</p></div>
+<div class="legend"><span><i style="background:#C6F432"></i>পেয়েছি / হয়ে গেছে</span><span><i style="background:#FFB23F"></i>খুঁজছি</span><span><i style="background:#0B0C0A"></i>পটভূমি</span></div></header>
+<div class="grid"><figure><div class="phone " data-theme="dark"><div class="sbar"><span>১:৪৭</span><span class="sb-r"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><path d="M12 19.5h.01"/></svg><span class="batt"></span></span></div><div class="cam"><div class="paper"><span class="hw">রহিম ভাই</span><span class="hw big">01712345678</span><span class="hw sm">৫০০ টাকা</span></div><div class="scrimwrap"><div class="hole"></div></div>
+<div class="sj-frame cam-frame cam-frame-pos"><i></i><i></i><i></i><i></i><span class="line"></span></div>
+<div class="cam-top"><button class="sj-iconbtn glass" aria-label="বন্ধ করুন"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button><span class="sj-pill searching"><span class="dot"></span>খুঁজছি…</span><button class="sj-iconbtn glass" aria-label="ফ্ল্যাশলাইট"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8v4l-2 3v10a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V10L8 7z"/><path d="M8 7h8"/><path d="M12 13v2"/></svg></button></div>
+<p class="cam-hint body-lg">নাম্বারটা বক্সের ভেতরে ধরুন</p><div class="cam-bottom"><button class="sj-btn quiet sm-btn"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/></svg>আগের নাম্বার</button></div></div><div class="navbar"><i></i></div></div><figcaption><b>১ · স্ক্যানার: খুঁজছে</b><span>Camera খুললেই খোঁজা শুরু। Amber কোণা আর scan line মানে "খুঁজছি"। কোনো shutter নেই।</span></figcaption></figure><figure><div class="phone " data-theme="dark"><div class="sbar"><span>১:৪৭</span><span class="sb-r"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><path d="M12 19.5h.01"/></svg><span class="batt"></span></span></div><div class="cam"><div class="paper"><span class="hw">রহিম ভাই</span><span class="hw big">01712345678</span><span class="hw sm">৫০০ টাকা</span></div><div class="scrimwrap"><div class="hole"></div></div>
+<div class="sj-frame cam-frame locked"><i></i><i></i><i></i><i></i><span class="line"></span></div>
+<div class="cam-top"><button class="sj-iconbtn glass" aria-label="বন্ধ করুন"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button><span class="sj-pill locked"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>পেয়েছি</span><button class="sj-iconbtn glass" aria-label="ফ্ল্যাশলাইট"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8v4l-2 3v10a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V10L8 7z"/><path d="M8 7h8"/><path d="M12 13v2"/></svg></button></div>
+<p class="cam-hint body-lg">ধরে রাখুন…</p></div><div class="navbar"><i></i></div></div><figcaption><b>২ · স্ক্যানার: পেয়েছে</b><span>৫টা frame-এর ৩টায় একই number পেলে lock হয়: কোণা lime, beep, ছোট vibration। ৩০০ms পর result উঠে আসে।</span></figcaption></figure><figure><div class="phone " data-theme="dark"><div class="sbar"><span>১:৪৭</span><span class="sb-r"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><path d="M12 19.5h.01"/></svg><span class="batt"></span></span></div><div class="screen">
+<div class="topbar"><button class="sj-iconbtn" aria-label="বন্ধ"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button><span class="sj-pill locked small"><svg class="" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>পেয়েছি</span><span style="width:64px"></span></div>
+<div class="res-body"><p class="caption muted">এই নাম্বারটা ঠিক আছে কি?</p>
+<div class="sj-number hero reading"><span>017</span><span class="now">1234</span><span>5678</span></div>
+<div class="res-meta"><span class="sj-chip">Grameenphone</span><button class="sj-btn quiet listen"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4h4l5 4V6L8 10z"/><path d="M16.5 9a4 4 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/></svg>শুনুন</button></div></div>
+<div class="actions"><button class="sj-btn primary block"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>কপি করুন</button><button class="sj-btn secondary block"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6L20 9"/><path d="M20 4v5h-5"/></svg>আবার স্ক্যান</button></div></div><div class="navbar"><i></i></div></div><figcaption><b>৩ · ফলাফল (Dark)</b><span>Number তিন লাইনে, প্রতিটা ৭২px। যে group পড়ে শোনানো হচ্ছে তার নিচে lime দাগ। একটাই primary button, বুড়ো আঙুলের কাছে।</span></figcaption></figure><figure><div class="phone " data-theme="light"><div class="sbar"><span>১:৪৭</span><span class="sb-r"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><path d="M12 19.5h.01"/></svg><span class="batt"></span></span></div><div class="screen">
+<div class="topbar"><button class="sj-iconbtn" aria-label="বন্ধ"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button><span class="sj-pill locked small"><svg class="" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>পেয়েছি</span><span style="width:64px"></span></div>
+<div class="res-body"><p class="caption muted">এই নাম্বারটা ঠিক আছে কি?</p>
+<div class="sj-number hero reading"><span>017</span><span class="now">1234</span><span>5678</span></div>
+<div class="res-meta"><span class="sj-chip">Grameenphone</span><button class="sj-btn quiet listen"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4h4l5 4V6L8 10z"/><path d="M16.5 9a4 4 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/></svg>শুনুন</button></div></div>
+<div class="actions"><button class="sj-btn primary block"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>কপি করুন</button><button class="sj-btn secondary block"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6L20 9"/><path d="M20 4v5h-5"/></svg>আবার স্ক্যান</button></div></div><div class="navbar"><i></i></div></div><figcaption><b>৩b · ফলাফল (Light)</b><span>Light theme-এ primary button কালো, লেখা lime। কারণ সাদা পটভূমিতে lime fill-এর কোনো কিনারা দেখা যায় না।</span></figcaption></figure><figure><div class="phone " data-theme="contrast"><div class="sbar"><span>১:৪৭</span><span class="sb-r"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><path d="M12 19.5h.01"/></svg><span class="batt"></span></span></div><div class="screen">
+<div class="topbar"><button class="sj-iconbtn" aria-label="বন্ধ"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button><span class="sj-pill locked small"><svg class="" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>পেয়েছি</span><span style="width:64px"></span></div>
+<div class="res-body"><p class="caption muted">এই নাম্বারটা ঠিক আছে কি?</p>
+<div class="sj-number hero reading"><span>017</span><span class="now">1234</span><span>5678</span></div>
+<div class="res-meta"><span class="sj-chip">Grameenphone</span><button class="sj-btn quiet listen"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4h4l5 4V6L8 10z"/><path d="M16.5 9a4 4 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/></svg>শুনুন</button></div></div>
+<div class="actions"><button class="sj-btn primary block"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>কপি করুন</button><button class="sj-btn secondary block"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6L20 9"/><path d="M20 4v5h-5"/></svg>আবার স্ক্যান</button></div></div><div class="navbar"><i></i></div></div><figcaption><b>৩c · ফলাফল (High contrast)</b><span>খাঁটি কালো আর হলুদ। Settings থেকে বেছে নেওয়া যায়।</span></figcaption></figure><figure><div class="phone " data-theme="dark"><div class="sbar"><span>১:৪৭</span><span class="sb-r"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><path d="M12 19.5h.01"/></svg><span class="batt"></span></span></div><div class="screen"><div class="topbar"><button class="sj-iconbtn" aria-label="ফিরে যান"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><span></span><span style="width:64px"></span></div>
+<div class="pad"><h1 class="display">২টা নাম্বার পেয়েছি</h1><p class="body muted">যেটা লাগবে সেটায় চাপুন</p>
+<div class="cards"><div class="sj-card"><div class="meta"><div class="sj-number card"><span>017</span><span>1234</span><span>5678</span></div><div class="crow"><span class="sj-chip">Grameenphone</span><span class="go"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></div></div></div>
+<div class="sj-card"><div class="meta"><div class="sj-number card"><span>018</span><span>9876</span><span>5432</span></div><div class="crow"><span class="sj-chip">Robi</span><span class="go"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></div></div></div></div></div>
+<div class="actions"><button class="sj-btn secondary block"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6L20 9"/><path d="M20 4v5h-5"/></svg>আবার স্ক্যান</button></div></div><div class="navbar"><i></i></div></div><figcaption><b>৪ · একাধিক নাম্বার</b><span>দুই বা তার বেশি valid number পেলে পুরো card-টাই চাপার জায়গা। চাপলে ৩ নম্বর screen আসে।</span></figcaption></figure><figure><div class="phone " data-theme="light"><div class="sbar"><span>১:৪৭</span><span class="sb-r"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><path d="M12 19.5h.01"/></svg><span class="batt"></span></span></div><div class="other light-app"><div class="oa-bar"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg><b>টাকা পাঠান</b></div>
+<div class="oa-body"><label>প্রাপকের নাম্বার</label><div class="oa-input focus"><span class="caret"></span></div><label>পরিমাণ</label><div class="oa-input"></div></div>
+<div class="sj-toast toast-pos"><svg class="" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>কপি হয়েছে</div>
+<div class="sj-bubble bubble-edge"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg></div>
+<div class="kb"><div class="kb-chip"><span class="kchip"><svg class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>01712345678</span></div><div class="kb-keys"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span class="w">*#</span><span>0</span><span class="w">⌫</span></div></div></div><div class="navbar"><i></i></div></div><figcaption><b>৫ · কপি হয়ে আগের app-এ ফেরা</b><span>Copy-র পর app নিজেই আগের app-এ ফিরে যায়। Toast জানায় "কপি হয়েছে"। Keyboard-এর উপরে Gboard-এর chip-এ এক tap দিলেই number বসে যায়।</span></figcaption></figure><figure><div class="phone " data-theme="light"><div class="sbar"><span>১:৪৭</span><span class="sb-r"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><path d="M12 19.5h.01"/></svg><span class="batt"></span></span></div><div class="other home"><div class="hgrid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="sj-bubble lg drag"><svg class="" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg></div><div class="dismiss"><svg class="" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>বন্ধ</span></div></div><div class="navbar"><i></i></div></div><figcaption><b>৬ · ভাসমান বাবল</b><span>যেকোনো app-এর উপর ভেসে থাকে, ছেড়ে দিলে পাশের কিনারায় লেগে যায়। নিচে টেনে আনলে "বন্ধ" লেখা জায়গা দেখা যায়।</span></figcaption></figure><figure><div class="phone " data-theme="dark"><div class="sbar"><span>১:৪৭</span><span class="sb-r"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><path d="M12 19.5h.01"/></svg><span class="batt"></span></span></div><div class="other shade"><div class="qs-head">মঙ্গলবার, ১০ নভেম্বর</div><div class="qs-grid"><div class="qs-tile"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><path d="M12 19.5h.01"/></svg><span>Wi-Fi</span></div><div class="qs-tile"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7l10 10-5 5V2l5 5L7 17"/></svg><span>Bluetooth</span></div><div class="qs-tile on"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg><span>নাম্বার স্ক্যান</span></div><div class="qs-tile"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8v4l-2 3v10a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V10L8 7z"/><path d="M8 7h8"/><path d="M12 13v2"/></svg><span>Torch</span></div><div class="qs-tile"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3l2 0 3 7 6 1v2l-6 1-3 7h-2l1-7-5-1-2 2H2l1-3-1-3h2l2 2 5-1z"/></svg><span>Airplane</span></div><div class="qs-tile"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg><span>Auto</span></div></div><div class="qs-bright"><span></span></div></div><div class="navbar"><i></i></div></div><figcaption><b>৭ · Quick Settings tile</b><span>যেকোনো জায়গা থেকে notification bar টেনে নামিয়ে এক tap। Tile-টা ভাইয়ের phone-এ প্রথম সারিতে বসিয়ে দেবেন।</span></figcaption></figure><figure><div class="phone " data-theme="dark"><div class="sbar"><span>১:৪৭</span><span class="sb-r"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><path d="M12 19.5h.01"/></svg><span class="batt"></span></span></div><div class="screen"><div class="topbar"><button class="sj-iconbtn" aria-label="ফিরে যান"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><h1 class="title tb-title">আগের নাম্বার</h1><span style="width:64px"></span></div>
+<div class="list"><div class="sj-row"><div class="meta"><div class="sj-number row"><span>017</span><span>1234</span><span>5678</span></div><span class="time">২ মিনিট আগে · Grameenphone</span></div><button class="sj-iconbtn" aria-label="কপি"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg></button></div><div class="sj-row"><div class="meta"><div class="sj-number row"><span>018</span><span>9876</span><span>5432</span></div><span class="time">১৫ মিনিট আগে · Robi</span></div><button class="sj-iconbtn" aria-label="কপি"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg></button></div><div class="sj-row"><div class="meta"><div class="sj-number row"><span>019</span><span>5555</span><span>0102</span></div><span class="time">৪০ মিনিট আগে · Banglalink</span></div><button class="sj-iconbtn" aria-label="কপি"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg></button></div><div class="sj-row"><div class="meta"><div class="sj-number row"><span>015</span><span>1122</span><span>3344</span></div><span class="time">১ ঘণ্টা আগে · Teletalk</span></div><button class="sj-iconbtn" aria-label="কপি"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg></button></div></div>
+<div class="actions"><button class="sj-btn secondary block">সব মুছুন</button></div></div><div class="navbar"><i></i></div></div><figcaption><b>৮ · আগের নাম্বার</b><span>শেষ ১০টা number, ২৪ ঘণ্টা পর নিজে থেকেই মুছে যায়। বাবল long-press করলেও এখানে আসা যায়।</span></figcaption></figure><figure><div class="phone " data-theme="dark"><div class="sbar"><span>১:৪৭</span><span class="sb-r"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><path d="M12 19.5h.01"/></svg><span class="batt"></span></span></div><div class="screen"><div class="pad"><h1 class="display">শুরু করার আগে</h1><p class="body muted">৪টা জিনিস চালু করতে হবে, একবারই।</p>
+<div class="steps"><div class="sj-step done"><span class="n"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div class="txt"><b>ক্যামেরা</b><span>দেওয়া আছে</span></div></div>
+<div class="sj-step todo"><span class="n">২</span><div class="txt"><b>অন্য app-এর উপর দেখানো</b><span>বাবলের জন্য</span></div></div>
+<div class="sj-step"><span class="n">৩</span><div class="txt"><b>নোটিফিকেশন</b><span>বাবল চালু রাখতে</span></div></div>
+<div class="sj-step"><span class="n">৪</span><div class="txt"><b>ব্যাটারি সেভার বাদ</b><span>যাতে বাবল বন্ধ না হয়</span></div></div></div></div>
+<div class="actions"><button class="sj-btn primary block">চালু করুন</button></div></div><div class="navbar"><i></i></div></div><figcaption><b>৯ · প্রথমবার সেটআপ</b><span>একবারে একটা ধাপ। Settings থেকে ফিরে এলে app নিজেই আবার check করে টিক দিয়ে দেয়।</span></figcaption></figure><figure><div class="phone " data-theme="dark"><div class="sbar"><span>১:৪৭</span><span class="sb-r"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><path d="M12 19.5h.01"/></svg><span class="batt"></span></span></div><div class="screen"><div class="topbar"><button class="sj-iconbtn" aria-label="ফিরে যান"><svg class="" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><h1 class="title tb-title">সেটিংস</h1><span style="width:64px"></span></div>
+<div class="pad set">
+<div class="set-g"><b class="label-s">থিম</b><div class="seg"><span class="on">ডার্ক</span><span>লাইট</span><span>কনট্রাস্ট</span></div></div>
+<div class="set-g"><b class="label-s">নাম্বারের আকার</b><div class="seg"><span>বড়</span><span class="on">আরও বড়</span><span>সবচেয়ে বড়</span></div></div>
+<div class="set-g"><b class="label-s">পড়ার গতি</b><div class="seg"><span class="on">ধীরে</span><span>স্বাভাবিক</span></div></div>
+<div class="set-g row-t"><b class="label-s">শব্দ ও কাঁপুনি</b><span class="tog on"><i></i></span></div>
+<div class="set-g row-t"><b class="label-s">বাবল দেখাও</b><span class="tog on"><i></i></span></div>
+<div class="sample"><span class="caption muted">নমুনা</span><div class="sj-number row"><span>017</span><span>1234</span><span>5678</span></div></div></div></div><div class="navbar"><i></i></div></div><figcaption><b>১০ · সেটিংস</b><span>লেখার আকার, theme, পড়ার গতি আর বাবলের আকার। প্রতিটা পরিবর্তন সঙ্গে সঙ্গে নিচের নমুনায় দেখা যায়।</span></figcaption></figure><figure><div class="phone " data-theme="dark"><div class="sbar"><span>১:৪৭</span><span class="sb-r"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><path d="M12 19.5h.01"/></svg><span class="batt"></span></span></div><div class="screen"><div class="pad err"><span class="err-ic"><svg class="" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 17.5A2 2 0 0 0 4.1 20.5h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span><h1 class="display">ক্যামেরা বন্ধ</h1><p class="body-lg muted">নাম্বার পড়তে ক্যামেরা লাগবে। নিচের বোতামে চাপ দিয়ে অনুমতি দিন।</p></div>
+<div class="actions"><button class="sj-btn primary block">অনুমতি দিন</button><button class="sj-btn secondary block">পরে</button></div></div><div class="navbar"><i></i></div></div><figcaption><b>১১ · সমস্যা: ক্যামেরা বন্ধ</b><span>সমস্যা কী আর কী করতে হবে, দুই লাইনে বলা থাকে। সাথে একটা লম্বা vibration। ঠিক করার একটাই বোতাম।</span></figcaption></figure></div></div></body></html>
